@@ -62,3 +62,16 @@ class Test_functional_tests():
         #count the number in the badge and assert with the length of the items list which is present in constants
         num= base.presence_of_elem((By.XPATH,"//span[@class='shopping_cart_badge']")).text
         assert num == str(len(constants.LIST_OF_ITEMS))
+
+    def test_remove_from_cart(self):
+        base = self.get_base()
+        #go to cart
+        cart= base.presence_of_elem((By.XPATH,"//a[@class='shopping_cart_link']"))
+        cart.click()
+        #remove button and click
+        listofremove= self.driver.find_elements(By.XPATH,"//button[@class='btn btn_secondary btn_small cart_button']")
+        for i in listofremove:
+            i.click()
+        #check invisiblity of elem located
+        value= base.elem_invisible((By.XPATH,"//span[@class='shopping_cart_badge']"))
+        assert value == True

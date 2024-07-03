@@ -14,3 +14,7 @@ class BasePage:
     def elem_clickable(self,locator):
         elem = self.wait.until(EC.element_to_be_clickable(locator))
         return elem
+
+    def elem_invisible(self,locator):
+        elem = self.wait.until(EC.invisibility_of_element(locator))
+        return elem
