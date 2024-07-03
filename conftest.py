@@ -6,7 +6,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 @pytest.fixture(scope="class")
 def test_setup(request):
-    driver = webdriver.Edge()
+    options = webdriver.EdgeOptions()
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    driver = webdriver.Edge(options=options)
     driver.maximize_window()
     wait = WebDriverWait(driver, 10)
     request.cls.driver = driver
