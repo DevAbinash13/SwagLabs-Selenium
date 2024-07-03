@@ -1,0 +1,15 @@
+1. Login Test
+    a.Verify that a user can log in with valid credentials.
+    b.Verify that an error message is displayed when logging in with invalid credentials.
+2. Add to Cart Test
+    a.Verify that a user can add items to the cart.
+    b.Verify that the cart count updates correctly when items are added.
+3. Remove from Cart Test
+    a.Verify that a user can remove items from the cart.
+    b.Verify that the cart count updates correctly when items are removed.
+4. Checkout Process Test
+    a.Verify that a user can proceed to checkout with items in the cart.
+    b.Verify that the checkout process completes successfully with valid information.
+5. Product Page Navigation Test
+    a.Verify that a user can navigate to a product's details page from the product list.
+    b.Verify that the product details match the selected product.
